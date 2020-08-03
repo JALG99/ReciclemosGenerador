@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer"
+
+    tools:openDrawer="start"
+    tools:context="com.example.reciclemosdemo.Grafico.ProductByBolsa">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/botton_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/relativeProductByBolsa"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="20dp"
+                    android:paddingBottom="30dp"
+                    app:layout_constraintEnd_toStartOf="@+id/rclDetalle"
+                    app:layout_constraintStart_toEndOf="@+id/rclDetalle"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/relativeTitleProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txtBolsa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Bolsa"
+                            android:textColor="#414142"
+                            android:textSize="16dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/txtCreadoFecha"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:text=""
+                            android:textColor="#414142"
+                            android:textSize="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtBolsa" />
+
+                        <TextView
+                            android:id="@+id/txtRecoojoFecha"
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:text=""
+                            android:textColor="#414142"
+                            android:textSize="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/txtCreadoFecha"
+                            app:layout_constraintTop_toBottomOf="@+id/txtCreadoFecha" />
+
+                        <TextView
+                            android:id="@+id/txtTitleReciclador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Reciclador: "
+                            android:textColor="#414142"
+                            android:textSize="16dp"
+                            app:layout_constraintEnd_toStartOf="@+id/txtReciclador"
+                            app:layout_constraintStart_toStartOf="@+id/txtCreadoFecha"
+                            app:layout_constraintTop_toBottomOf="@+id/txtRecoojoFecha" />
+
+                        <TextView
+                            android:id="@+id/txtReciclador"
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="16dp"
+                            android:text=""
+                            android:textColor="#414142"
+                            android:textSize="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/txtTitleReciclador"
+                            app:layout_constraintTop_toBottomOf="@+id/txtRecoojoFecha"
+                            app:layout_goneMarginLeft="20dp" />
+
+                        <TextView
+                            android:id="@+id/txtTitleObservaciones"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Observaciones: "
+                            android:textColor="#414142"
+                            android:textSize="16dp"
+                            app:layout_constraintStart_toStartOf="@+id/txtCreadoFecha"
+                            app:layout_constraintTop_toBottomOf="@+id/txtReciclador" />
+
+
+                        <TextView
+                            android:id="@+id/txtObservaciones"
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="16dp"
+                            android:text=""
+                            android:textColor="#414142"
+                            android:textSize="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/txtTitleObservaciones"
+                            app:layout_constraintTop_toBottomOf="@+id/txtReciclador" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/txtDetalle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relativeTitleProduct"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Resumen:"
+                        android:textColor="#414142"
+                        android:textSize="20dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerProductos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtDetalle"
+                        android:layout_marginTop="20dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/puntosRelative"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/recyclerProductos"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="50dp">
+
+
+                        <TextView
+                            android:id="@+id/txtPesoPlastic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Peso total :"
+                            android:textColor="#414142"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/txtPesoTotales"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toEndOf="@+id/txtPesoPlastic"
+                            android:text="0"
+                            android:textColor="#414142"
+
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/txtCantidadMetal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtPesoPlastic"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toEndOf="@+id/imagePlastic"
+                            android:textColor="#414142"
+
+                            android:fontFamily="sans-serif-black"
+                            android:text="Puntos :"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/txtPuntosTotales"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtPesoTotales"
+                            android:layout_alignStart="@+id/txtPesoTotales"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#414142"
+
+                            android:text="0"
+                            android:textSize="16dp" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="Detalle :"
+                    android:textSize="20dp"
+                    android:id="@+id/titleDetalle"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="#414142"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="@id/relativeProductByBolsa"
+                    app:layout_constraintTop_toBottomOf="@+id/relativeProductByBolsa" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rclDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleDetalle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/botton_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:backgroundTint="@color/colorBarBackground"
+            app:labelVisibilityMode="labeled"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/menu_navigation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        app:headerLayout="@layout/nav_header"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/colorBarBackground"
+        app:itemTextColor="@color/colorPrimary"
+        app:itemIconTint="@color/colorNotSelectedBar"
+        app:menu="@menu/drawer_menu"
+        android:layout_gravity="start"
+        android:id="@+id/navigationView"
+        />
+</androidx.drawerlayout.widget.DrawerLayout>

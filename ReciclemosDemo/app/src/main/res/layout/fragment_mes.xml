@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.reciclemosdemo.Grafico.MonthFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtMesSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginTop="10dp"
+            android:text="Mes:"
+            app:layout_constraintBottom_toTopOf="@+id/spnTipo"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtResiduoSpinner"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spnMes"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_marginTop="20dp"
+            android:hint="Seleccione el mes"
+            app:layout_constraintBottom_toTopOf="@+id/spnTipo"
+            app:layout_constraintStart_toStartOf="@+id/spnTipo"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtResiduoSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginTop="10dp"
+            android:text="Tipo de Residuo:"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/spnTipo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spnMes" />
+
+        <Spinner
+            android:id="@+id/spnTipo"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:hint="Seleccione el tipo de residuo"
+            app:layout_constraintBottom_toTopOf="@+id/txtTitleKilos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtResiduoSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/spnMes" />
+
+        <TextView
+            android:id="@+id/txtTitleKilos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Kilos Totales:  "
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@+id/txtTitlePuntos"
+            app:layout_constraintTop_toBottomOf="@+id/spnTipo" />
+
+        <TextView
+            android:id="@+id/txtInputKilos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="36dp"
+            android:text=""
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@+id/txtTitleKilos"
+            app:layout_constraintTop_toBottomOf="@+id/spnTipo" />
+
+
+        <TextView
+            android:id="@+id/txtTitleCantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Cant. Bolsas:  "
+
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@+id/txtTitlePuntos"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputKilos" />
+
+        <TextView
+            android:id="@+id/txtInputCantidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@+id/txtInputKilos"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputKilos" />
+
+
+            <TextView
+                android:id="@+id/txtTitlePuntos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Ptos. Acumulados:  "
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtInputPuntos"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtInputCantidad" />
+
+            <TextView
+                android:id="@+id/txtInputPuntos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/txtTitlePuntos"
+                app:layout_constraintTop_toBottomOf="@+id/txtInputCantidad" />
+
+
+
+
+        <TextView
+            android:id="@+id/txtTitlePieChart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="200dp"
+            android:text="POR TIPO DE RESIDUO"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputPuntos" />
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/piechartResiduos"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtTitleTopResiduos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitlePieChart" />
+
+        <TextView
+            android:id="@+id/txtTitleTopResiduos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="273dp"
+            android:text="TOP 3 RESIDUOS"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/piechartResiduos" />
+
+
+        <TextView
+            android:id="@+id/txtNombreResiduo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-black"
+            android:text=""
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/txtPesoResiduo1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleTopResiduos" />
+
+        <TextView
+            android:id="@+id/txtPesoResiduo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:text=""
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtNombreResiduo1"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleTopResiduos" />
+
+        <TextView
+            android:id="@+id/txtNombreResiduo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:textSize="16dp"
+
+            app:layout_constraintEnd_toStartOf="@+id/txtPesoResiduo2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPesoResiduo1" />
+
+        <TextView
+            android:id="@+id/txtPesoResiduo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtNombreResiduo2"
+            app:layout_constraintTop_toBottomOf="@+id/txtPesoResiduo1" />
+
+        <TextView
+            android:id="@+id/txtNombreResiduo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text=""
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/txtPesoResiduo3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPesoResiduo2" />
+
+        <TextView
+            android:id="@+id/txtPesoResiduo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text=""
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtTitleChartBolsas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtNombreResiduo3"
+            app:layout_constraintTop_toBottomOf="@+id/txtPesoResiduo2" />
+
+
+        <TextView
+            android:id="@+id/txtTitleChartBolsas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            android:text="KILOS DE RESIDUOS ENTREGADOS POR MES"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPesoResiduo3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:rotation="-90"
+            android:text="Kilos"
+            android:textSize="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/chartResiduo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleChartBolsas" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartResiduo"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtTitleChartPuntos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTitleChartBolsas"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txtTitleChartPuntos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            android:text="CANTIDAD DE PUNTOS GANADOS POR MES"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chartResiduo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:rotation="-90"
+            android:text="Puntos"
+            android:textSize="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/chartPuntos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleChartPuntos" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartPuntos"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleChartPuntos" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

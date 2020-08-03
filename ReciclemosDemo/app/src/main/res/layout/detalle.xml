@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/imgProducto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login" />
+
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Nombre Producto"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imgProducto"
+        app:layout_constraintTop_toTopOf="@+id/imgProducto" />
+
+
+    <ImageView
+        android:id="@+id/imgTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tint="#99E6E6E6"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTipo"
+        app:layout_constraintStart_toStartOf="@+id/txtNombre"
+        app:layout_constraintTop_toTopOf="@+id/txtTipo"
+        app:srcCompat="@drawable/active_dot" />
+
+    <TextView
+        android:id="@+id/txtTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="6dp"
+        android:text=" Tipo"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@+id/imgTipo"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
+
+    <TextView
+        android:id="@+id/txtContenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="0.0 ml"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNombre"
+        app:layout_constraintStart_toEndOf="@+id/txtNombre"
+        app:layout_constraintTop_toTopOf="@+id/txtNombre" />
+
+    <TextView
+        android:id="@+id/txtTotalCantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cant 0"
+        android:textColor="@android:color/primary_text_light"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTotalPuntos"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/txtTotalPuntos" />
+
+    <TextView
+        android:id="@+id/txtPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0 gr"
+        android:textColor="@color/colorPeso"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imgTipo"
+        app:layout_constraintTop_toBottomOf="@+id/txtTipo" />
+
+    <TextView
+        android:id="@+id/txtTotalPuntos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="+0 pts"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtPeso"
+        app:layout_constraintTop_toBottomOf="@+id/txtPeso" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:background="#FFFFFF"
+        android:src="@android:drawable/ic_menu_delete"
+        android:tint="@android:color/holo_red_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtContenido"
+        app:layout_constraintTop_toTopOf="@+id/imgProducto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp">
+
+
+
+    <RelativeLayout
+        android:background="@drawable/card_bag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/item_LastBolsa"
+        android:paddingBottom="20dp"
+
+        >
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/txtBolsa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/app_name"
+            android:textColor="#414142"
+            />
+
+
+        <TextView
+            android:id="@+id/txtCreadoFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_alignStart="@+id/txtBolsa"
+            android:layout_alignLeft="@+id/txtBolsa"
+            android:text="@string/app_name"
+            android:layout_below="@+id/txtBolsa"
+            android:textColor="#414142" />
+        <TextView
+            android:id="@+id/txtRecoojoFecha"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txtBolsa"
+            android:layout_marginTop="20dp"
+            android:layout_alignLeft="@+id/txtBolsa"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/app_name"
+            android:layout_below="@+id/txtCreadoFecha"
+            android:textColor="#414142" />
+        <TextView
+            android:id="@+id/txtObservaciones"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txtBolsa"
+            android:layout_marginTop="20dp"
+            android:layout_alignLeft="@+id/txtBolsa"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/app_name"
+            android:layout_below="@+id/txtRecoojoFecha"
+            android:textColor="#414142" />
+
+        <TextView
+            android:id="@+id/txtViewDetail"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtObservaciones"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Ver detalle "
+            android:textColor="@color/botones_principales" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageBolsaIcon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bolsaicon"
+        app:layout_constraintEnd_toStartOf="@+id/item_LastBolsa"
+        app:layout_constraintStart_toStartOf="@+id/item_LastBolsa"
+        app:layout_constraintTop_toTopOf="@+id/item_LastBolsa"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

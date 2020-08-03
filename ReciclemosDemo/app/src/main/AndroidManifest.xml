@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.reciclemosdemo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".Grafico.InitialValues"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Inicio.MeInformoActivity"
+            android:configChanges="orientation"
+            android:label="Me Informo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Inicio.CatalogoActivity"
+            android:configChanges="orientation"
+            android:label="Catálogo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Grafico.RecicladorActivity"
+            android:label="Mi reciclador"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Grafico.SolicitudActivity"
+            android:label="Actualizacion de datos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Grafico.ProfileActivity"
+            android:label="Mi perfil"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Inicio.RegistrarBolsaActivity"
+            android:configChanges="orientation"
+            android:label="Vincular Bolsa"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Inicio.ScanBarCodeActivity"
+            android:configChanges="orientation"
+            android:label="Escáner"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Inicio.BolsaActivity"
+            android:configChanges="orientation"
+            android:label="Mi bolsa"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Inicio.RegisterActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Inicio.LoginActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Grafico.TendenciaActivity"
+            android:configChanges="orientation"
+            android:label="Mi aporte"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Grafico.ProductByBolsa"
+            android:configChanges="orientation"
+            android:label="Mi aporte"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Grafico.ListBolsas"
+            android:configChanges="orientation"
+            android:label="Mi aporte"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Adicionales.CondicionesUso"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.PopUpTheme" />
+        <activity
+            android:name=".Inicio.SliderActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

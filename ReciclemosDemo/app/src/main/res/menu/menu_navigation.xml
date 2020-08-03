@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/miaporte"
+        android:title="Mi Aporte"
+        android:icon="@drawable/ic_mi_aporte"/>
+
+    <item
+        android:id="@+id/escaner"
+        android:title="Escáner"
+        android:icon="@drawable/ic_escaner"/>
+
+    <item
+        android:id="@+id/catalogo"
+        android:title="Catálogo"
+        android:icon="@drawable/ic_catalogo"/>
+
+    <item
+        android:id="@+id/mibolsa"
+        android:title="Mi Bolsa"
+        android:icon="@drawable/ic_mi_bolsa"/>
+
+</menu>

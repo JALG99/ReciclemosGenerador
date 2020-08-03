@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer"
+    android:layout_height="match_parent"
+    tools:context=".Grafico.ProfileActivity">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/botton_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtTitleNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Nombre"
+                    android:textColor="@color/colorNotSelectedBar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="sans-serif-black"
+                    android:id="@+id/txtNombre"
+                    android:text="Nombre:  "
+                    android:layout_marginLeft="20dp"
+
+                    app:layout_constraintEnd_toStartOf="@+id/txtInputNombre"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTitleNombre"
+                    />
+
+                <TextView
+                    android:id="@+id/txtInputNombre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtNombre"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTitleNombre" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtApellido"
+                    android:fontFamily="sans-serif-black"
+                    android:layout_marginTop="10dp"
+                    android:text="Apellido:"
+                    app:layout_constraintStart_toStartOf="@id/txtNombre"
+
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputNombre"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+
+                    android:id="@+id/txtInputApellidos"
+                    app:layout_constraintStart_toStartOf="@id/txtInputNombre"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputNombre"
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="32dp"
+                    android:id="@+id/imgLine1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:background="@drawable/line"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputApellidos" />
+
+                <TextView
+                    android:id="@+id/txtCuenta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="241dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Cuenta"
+                    android:textColor="@color/colorNotSelectedBar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgLine1" />
+
+
+                <TextView
+                    android:id="@+id/txtCorreo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Email : "
+                    app:layout_constraintEnd_toStartOf="@+id/txtInputCorreo"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/txtPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCuenta" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/txtInputCorreo"
+                    app:layout_constraintStart_toStartOf="@id/txtInputPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCuenta"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/txtNombre"
+                    android:id="@+id/txtPassword"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Password:  "
+                    app:layout_constraintEnd_toStartOf="@+id/txtInputPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputCorreo"
+                    />
+
+
+
+                <TextView
+                    android:id="@+id/txtInputPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="10dp"
+                    android:text=" *********"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputCorreo" />
+
+                <TextView
+                    android:id="@+id/txtFacebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Facebook: "
+                    app:layout_constraintEnd_toStartOf="@+id/txtInputFacebook"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/txtPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:text="No conectado"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/colorSelectedBar"
+                    android:id="@+id/txtInputFacebook"
+                    app:layout_constraintStart_toStartOf="@id/txtInputPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputPassword"
+                    />
+
+                <TextView
+                    android:id="@+id/txtGmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Gmail: "
+                    app:layout_constraintEnd_toStartOf="@+id/txtInputGmail"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/txtPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputFacebook" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:text="No conectado"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/colorSelectedBar"
+                    android:id="@+id/txtInputGmail"
+                    app:layout_constraintStart_toStartOf="@id/txtInputPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputFacebook"
+                    />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="32dp"
+                    android:id="@+id/imgLine2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:background="@drawable/line"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputGmail" />
+
+                <TextView
+                    android:id="@+id/txtSobremi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="237dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Sobre ti"
+                    android:textColor="@color/colorNotSelectedBar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgLine2" />
+
+                <TextView
+                    android:id="@+id/txtDNI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="DNI : "
+                    app:layout_constraintEnd_toStartOf="@+id/txtInputDNI"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/txtDepartamento"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSobremi" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/txtInputDNI"
+                    app:layout_constraintStart_toStartOf="@id/txtInputDepartamento"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSobremi"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/txtNombre"
+                    android:id="@+id/txtDepartamento"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Departamento:  "
+                    app:layout_constraintEnd_toStartOf="@+id/txtInputDepartamento"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputDNI"
+                    />
+
+
+
+                <TextView
+                    android:id="@+id/txtInputDepartamento"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtDepartamento"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputDNI" />
+
+                <TextView
+                    android:id="@+id/txtDistrito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Distrito: "
+                    app:layout_constraintEnd_toStartOf="@+id/txtInputDistrito"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/txtDepartamento"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputDepartamento" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:fontFamily="sans-serif-black"
+                    android:id="@+id/txtInputDistrito"
+                    app:layout_constraintStart_toStartOf="@id/txtInputDepartamento"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputDepartamento"
+                    />
+
+                <TextView
+                    android:id="@+id/txtCondominio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Condominio: "
+                    app:layout_constraintEnd_toStartOf="@+id/txtInputCondominio"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/txtDepartamento"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputDistrito" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:fontFamily="sans-serif-black"
+                    android:id="@+id/txtInputCondominio"
+                    app:layout_constraintStart_toStartOf="@id/txtInputDepartamento"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputDistrito"
+                    />
+
+                <TextView
+                    android:id="@+id/txtDireccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Direccion: "
+                    app:layout_constraintEnd_toStartOf="@+id/txtInputDireccion"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/txtDepartamento"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputCondominio" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:fontFamily="sans-serif-black"
+                    android:id="@+id/txtInputDireccion"
+                    app:layout_constraintStart_toStartOf="@id/txtInputDepartamento"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputCondominio"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/txtNombre"
+                    android:id="@+id/txtFechaNacimiento"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Fecha de Nacimiento:  "
+                    app:layout_constraintEnd_toStartOf="@+id/txtInputFechaNacimiento"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputDireccion"
+                    />
+
+
+
+                <TextView
+                    android:id="@+id/txtInputFechaNacimiento"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtFechaNacimiento"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputDireccion" />
+
+                <TextView
+                    android:id="@+id/txtSexo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Sexo: "
+                    app:layout_constraintEnd_toStartOf="@+id/txtInputSexo"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/txtDepartamento"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputFechaNacimiento" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:fontFamily="sans-serif-black"
+                    android:id="@+id/txtInputSexo"
+                    app:layout_constraintStart_toStartOf="@id/txtInputDepartamento"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputFechaNacimiento"
+                    />
+                <Button
+                    android:id="@+id/imgCerrarSesion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="64dp"
+                    android:layout_marginBottom="16dp"
+                    android:onClick="SolicitudSol"
+                    android:text="Solicitar modificar datos"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInputSexo" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/botton_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:backgroundTint="@color/colorBarBackground"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_navigation" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        app:headerLayout="@layout/nav_header"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/colorBarBackground"
+        app:itemTextColor="@color/colorPrimary"
+        app:itemIconTint="@color/colorNotSelectedBar"
+        app:menu="@menu/drawer_menu"
+        android:layout_gravity="start"
+        android:id="@+id/navigationView"
+        />
+</androidx.drawerlayout.widget.DrawerLayout>
